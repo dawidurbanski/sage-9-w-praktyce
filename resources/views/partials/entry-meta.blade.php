@@ -1,6 +1,7 @@
-<time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
-<p class="byline author vcard">
-  {{ __('By', 'sage') }} <a href="{{ get_author_posts_url(get_the_author_meta('ID')) }}" rel="author" class="fn">
-    {{ get_the_author() }}
+<span itemprop="dateModified" class="updated" content="@modified('c')">@modified()</span>
+<span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  {{ __('By', 'sage') }}
+  <a href="@authorurl" itemprop="url">
+    <span class="fn" itemprop="name" rel="author">@author</span>
   </a>
-</p>
+</span>
